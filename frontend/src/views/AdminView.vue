@@ -11,6 +11,6 @@
 
 <style scoped>
     .admin-view {
-        padding-top: 6rem;
+        padding-top: 12vh;
     }
 </style>

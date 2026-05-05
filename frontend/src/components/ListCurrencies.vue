@@ -67,11 +67,11 @@
 </script>
 
 <template>
-    <div class="container mt-10">
+    <div class="container ">
         <p v-if="message" :class="`message-bar text-${messageType}`">{{  message }}</p>
         <CreateCurrencyForm @rate-created="handleCreated"/>
         <div class="table-wrapper">
-            <table class="table mt-5 text-center table-hover">
+            <table class="table table-striped text-center table-hover">
                 <thead>
                     <tr>
                         <th>From</th>
@@ -103,13 +103,15 @@
 
     .container {
         z-index: 1;
-        
+        height: 88vh;
+        max-width: 100%;
+        overflow-y: auto;
     }
 
     .table-wrapper {
-        max-height: 650px;
+        max-height: calc(88vh - 5rem);
         overflow-y: auto;
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 
     .table thead {
@@ -121,7 +123,7 @@
 
     .message-bar {
         position: fixed;
-        top: 2%;
+        top: 12.5vh;
         left: 50%;
         font-weight: 500;
         font-size: 1rem;

@@ -47,7 +47,7 @@
         <!-- Button trigger modal -->
          <div class="sticky-bar">
             <div class="d-flex justify-content-end">
-                <button type="button" class="btn btn-primary create-btn mt-5 px-3 py-2" data-bs-toggle="modal" data-bs-target="#create-modal">
+                <button type="button" class="btn btn-primary create-btn  px-3 py-2" data-bs-toggle="modal" data-bs-target="#create-modal">
                 New Exchange Rate
                 </button>
             </div>
@@ -112,9 +112,11 @@
         color: white;
     }
     .sticky-bar {
-    position: fixed;
-    top: 2rem;
-    left: 45%;
+    display: flex;
+    justify-content: end;
+    padding-top: 1rem;
+    padding-right: 1rem;
     z-index: 50;
-}
+    height: 4rem;
+    }
 </style>
