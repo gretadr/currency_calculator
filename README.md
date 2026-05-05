@@ -20,13 +20,15 @@ You need Docker Desktop to be installed (https://www.docker.com/products/docker-
 
 ## How to run
 
-1. Clone the repository:    
+1. Install and Open Docker Desktop
+
+2. Clone the repository:    
 
     `git clone https://github.com/gretadr/currency_calculator.git`
 
 3. Navigate into the project folder:   
     
-    `cd currency-calculator`
+    eg: `cd currency-calculator`
 
 4. Run with Docker Compose:
 
