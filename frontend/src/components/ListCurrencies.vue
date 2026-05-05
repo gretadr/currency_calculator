@@ -122,6 +122,7 @@
     }
 
     .message-bar {
+        white-space: pre-line;
         position: fixed;
         top: 12.5vh;
         left: 50%;
@@ -135,6 +136,7 @@
         box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         min-width: 300px;
         text-align: center;
+
     }
 
 </style>

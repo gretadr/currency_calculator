@@ -57,7 +57,7 @@ router.post("/", authenticateToken, async (req, res) => {
         } 
 
         const newRate = await db.query("INSERT INTO exchange_rates (from_currency, to_currency, rate) VALUES ($1, $2, $3) RETURNING * ", [fromCurrency, toCurrency, numRate]);
-        return res.status(201).json({message: `Rate ${fromCurrency} → ${toCurrency} created successfully. `, data: newRate.rows[0] });
+        return res.status(201).json({message: `Rate ${fromCurrency} ⟶ ${toCurrency} created successfully. `, data: newRate.rows[0] });
         
     } catch (err) {
         console.error(err);
@@ -90,7 +90,19 @@ router.patch("/:id", authenticateToken, async (req, res) => {
         if (updateRate.rows.length ===0 ) {
             return res.status(404).json({ error: "Rate not found"});
         }
-        return res.status(200).json({ message: "Rate updated successfully ", data: updateRate.rows[0]});
+
+        //Update reverse pair if exists
+        const updatedRow = updateRate.rows[0];
+
+        const reverseRate= 1/numRate;
+        
+        const reverseUpdate = await db.query("UPDATE exchange_rates SET rate=$1 WHERE from_currency=$2 AND to_currency=$3 RETURNING *", [reverseRate, updatedRow.to_currency, updatedRow.from_currency ]);
+
+        if (reverseUpdate.rows.length > 0) {
+            return res.status(200).json({ message: `${updatedRow.from_currency } ⟶ ${updatedRow.to_currency} was set to ${numRate} \nReverse pair was also updated!`});
+        } else {
+            return res.status(200).json({ message: `${updatedRow.from_currency } ⟶ ${updatedRow.to_currency} was set to ${numRate}`});
+        }
     
     } catch (err) {
         console.error(err);
