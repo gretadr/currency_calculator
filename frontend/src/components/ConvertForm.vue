@@ -1,6 +1,8 @@
 <script setup>
     import { ref, onMounted, computed, watch, nextTick } from "vue";
     import { convertCurrency, getRates } from "../services/api.js";
+    import Multiselect from "vue-multiselect";   //////////////////////
+    import "vue-multiselect/dist/vue-multiselect.css";   ////////
 
     const from = ref("");
     const to = ref("");
@@ -123,10 +125,22 @@
             <label class="form-label">Amount</label>
             <div class="input-group">
                 <input type="number" class="form-control form-control-lg" placeholder="0" v-model.number="amount">
-                <select class="form-select form-select-lg currency-select" v-model="from">
+                <!-- <select class="form-select form-select-lg currency-select" v-model="from">
                     <option disabled value="">Select</option>
                     <option v-for="currency in uniqueFromCurrencies" :key="currency" :value="currency">{{ currency }}</option>
-                </select>
+                </select> -->
+                <Multiselect
+                    v-model="from"
+                    :options="uniqueFromCurrencies"
+                    placeholder="Select"
+                    :searchable="true"
+                    :allow-empty="false"
+                    :show-no-results="false"
+                    select-label=""
+                    deselect-label=""
+                    selected-label=""
+                    class="currency-select"
+                />
             </div>
 
         </div>
@@ -142,10 +156,22 @@
             <label class="form-label">Converted to</label>
             <div class="input-group">
                 <input type="text" class="form-control form-control-lg" readonly v-model="calculation" >
-                <select class="form-select form-select-lg currency-select" v-model="to">
+                <!-- <select class="form-select form-select-lg currency-select" v-model="to">
                     <option disabled value="">Select</option>
                     <option v-for="currency in availableToCurrencies" :key="currency" :value="currency">{{ currency }}</option>
-                </select>
+                </select> -->
+                <Multiselect
+                    v-model="to"
+                    :options="availableToCurrencies"
+                    placeholder="Select"
+                    :searchable="true"
+                    :allow-empty="false"
+                    :show-no-results="false"
+                    select-label=""
+                    deselect-label=""
+                    selected-label=""
+                    class="currency-select"
+                />
             </div>
 
         </div>
@@ -158,7 +184,7 @@
     .convert-card {
         max-width: 600px;
         text-align: left;
-        margin: 5rem auto;
+        margin: 8rem auto 5rem auto;
         padding: 2rem;
         border: 1px solid #ddd;
         border-radius: 12px;
@@ -166,23 +192,51 @@
         background-color: #fff;
     }
 
-    .currency-select {
-        max-width: 200px;
-        font-size:0.95rem;
-        cursor: pointer;
-        border-radius: 8px;
-        background-color: #f8f9fa;
+    .input-group > input {
+        flex: 1 1 auto;
     }
 
-    .currency-select option {
-        font-size: 0.9rem;
-        padding: 8px;
+    .input-group > .currency-select {
+        flex: 0 0 250px;
+    }
+
+    .currency-select {
+        /* max-width: 250px; */
+        font-size:0.95rem;
+        cursor: pointer;
+        /* border-radius: 8px;
+        background-color: #f8f9fa; */
     }
 
     .swap-btn {
         width: 50px;
         height: 50px;
         font-size: 1.2rem;  
+    }
+
+    input {
+        border-radius: 8px;
+    }
+
+    .currency-select :deep(.multiselect) {
+        /* width: 250px; */
+        min-height: calc(3.5rem);
+    }
+
+    .currency-select :deep(.multiselect__tags) {
+        min-height: calc(3.5rem);
+        padding: 0.75rem 40px 0 0.75rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .currency-select :deep(.multiselect__single) {
+        font-size: 1.25rem;
+        padding-top: 4px;
+    }
+
+    .currency-select :deep(.multiselect__content-wrapper) {
+        min-width: 280px;
     }
 
 </style>
