@@ -47,6 +47,7 @@
 
     //Delete a specific rate and update the list
     async function deleteSelectedRate (id) {
+        if (!confirm("Are you sure you want to delete this rate?")) return;
         try {
             const result = await deleteRate(id);
             // console.log(response);

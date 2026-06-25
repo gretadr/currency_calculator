@@ -39,11 +39,11 @@
     });
 
     //Reset to if pair is invalid after from changes
-    watch([from, () => {
+    watch(from, () => {
         if (!isValid(from.value, to.value)) {
             to.value = "";
         }
-    }]);
+    });
 
     //GET the current selected rate for display under the title
     const selectedRate = computed (() => {
@@ -237,6 +237,7 @@
 
     .currency-select :deep(.multiselect__content-wrapper) {
         min-width: 280px;
+      
     }
 
 </style>

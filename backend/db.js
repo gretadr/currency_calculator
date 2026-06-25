@@ -1,7 +1,5 @@
 import pg from "pg";
-import env from "dotenv";
 
-env.config();
 
 const db = new pg.Pool({
     user: process.env.DB_USER,
