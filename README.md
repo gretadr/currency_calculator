@@ -11,6 +11,24 @@ A full-stack currency converter with a secured admin panel for managing exchange
 - **Username:** `admin`
 - **Password:** `currency1`
 
+## Screenshots
+
+![Home Page](./screenshots/home.png)
+
+![Calculator](./screenshots/calculator.PNG)
+
+![Admin Panel](./screenshots/admin_panel.PNG)
+
+
+## 🌐 Live Demo
+
+👉 **[Try the App](https://currency-calculator-sepia.vercel.app/)** 👈
+
+## Demo Admin Credentials
+
+- **Username:** `admin`
+- **Password:** `currency1`
+
 ## Sceenshots
 
 ![Home Page](./screenshots/home.png)
