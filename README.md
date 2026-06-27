@@ -6,40 +6,30 @@ A full-stack currency converter with a secured admin panel for managing exchange
 
 👉 **[Try the App](https://currency-calculator-sepia.vercel.app/)** 👈
 
-## Demo Admin Credentials
+<details>
+<summary>🔧 For developers — Backend API</summary>
 
-- **Username:** `admin`
-- **Password:** `currency1`
+Live API: `https://currency-calculator-backend-g6dt.onrender.com/api`
 
-## Screenshots
-
-![Home Page](./screenshots/home.png)
-
-![Calculator](./screenshots/calculator.PNG)
-
-![Admin Panel](./screenshots/admin_panel.PNG)
-
-
-## 🌐 Live Demo
-
-👉 **[Try the App](https://currency-calculator-sepia.vercel.app/)** 👈
+</details>
 
 ## Demo Admin Credentials
 
 - **Username:** `admin`
 - **Password:** `currency1`
 
-## Sceenshots
+## 📸 Application Preview
 
-![Home Page](./screenshots/home.png)
+![Home Page](./screenshots/home.PNG)
 
 ![Calculator](./screenshots/calculator.PNG)
 
 ![Admin Panel](./screenshots/admin_panel.PNG)
 
-## ✨ Features
 
-- 🔄 Convert between **20 currencies using 380 exchange rate pairs**
+## Features
+
+- 🔄 Convert between multiple currencies
 - 🔍 Searchable currency dropdowns
 - 🔁 One-click currency swap
 - 🔐 JWT-based admin authentication
