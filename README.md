@@ -1,62 +1,101 @@
-# Currency Calculator
+# 💱 Currency Calculator
 
-A full-stack currency converter with an admin panel for managing exchange rates
+![App Preview](./screenshots/preview.png)
 
-## Tech Stack
-- Backend: Node.js, Express, PostgreSQL, JWT
-- Frontend: Vue 3 (Composition API), Vite, Bootstrap 5, Axios
-- Database: PostgreSQL
-- Deployment: Docker, Docker Compose, Nginx
+A full-stack currency converter with a **secure** admin panel for managing exchange rates. Built with Vue 3, Node.js, and PostgreSQL.
 
-## Features
-- Currency conversion between 20 currencies (380 exchange rate pairs)
-- Public access to currency calculator
-- Admin login with JWT authentication
-- Protected admin panel for managing exchange rates (CRUD operations)
-- Token expiration handling
+## 🌐 Live Demo
 
-## Requirements
-You need Docker Desktop to be installed (https://www.docker.com/products/docker-desktop/)
+👉 **[Try the App](https://your-vercel-url.vercel.app)** 👈
 
-## How to run
+**Demo Admin Login:**
 
-1. Install and Open Docker Desktop
+* Username: `admin`
+* Password: `currency1`
 
-2. Clone the repository:    
+## 📸 Screenshots
 
-    `git clone https://github.com/gretadr/currency_calculator.git`
+![Calculator](./screenshots/calculator.png)
 
-3. Navigate into the project folder:   
-    
-    eg: `cd currency-calculator`
+![Admin Panel](./screenshots/admin.png)
 
-4. Run with Docker Compose:
+## ✨ Features
 
-    `docker-compose up --build`
+* 🔄 Convert between **20 currencies using 380 exchange rate pairs**
+* 🔍 Searchable currency dropdowns
+* 🔁 One-click currency swap
+* 🔐 JWT-based admin authentication
+* ⚙️ Protected admin panel with full CRUD operations
+* 🔄 Automatic synchronization of reverse exchange rates
+* ⏱️ Token expiration with auto-logout
+* 🐳 Dockerized for easy local development
 
-5. When everything is up, open your browser at:
-    http://localhost:8080
+## 🛠️ Tech Stack
 
-## Default Admin Credentials 
+**Frontend:** Vue 3 (Composition API), Vue Router, Vite, Bootstrap 5, Axios
+**Backend:** Node.js, Express, JWT, Bcrypt
+**Database:** PostgreSQL (Supabase)
+**DevOps:** Docker, Docker Compose
+**Deployment:** Vercel, Render, Supabase
 
-- Username: `admin`
-- Password: `currency1`
+## 🚀 Local Setup
 
-## API endpoints
+### Prerequisites
 
-Public:
+* [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
-- `POST /api/auth/login`- Authenticate user
-- `GET /api/currencies` - Get all exchange rates
-- `GET /api/currencies/:id` - Get a specific rate
-- `GET /api/convert?from=X&to=Y&amount=Z` - Convert currency
+### Steps
 
-Protected (require JWT)
+```bash
+# Clone the repository
+git clone https://github.com/gretadr/currency_calculator.git
+cd currency_calculator
 
-- `POST /api/currencies` - Create new rate
-- `PATCH /api/currencies/:id` - Update rate
-- `DELETE /api/currencies/:id` - Delete rate
+# Run with Docker Compose
+docker-compose up --build
+```
 
-## Stop Application
+Open your browser at:
 
-    Press `Ctrl+C`in the terminal
+```
+http://localhost:8080
+```
+
+Backend API:
+
+```
+http://localhost:5000
+```
+
+## 🔌 API Endpoints
+
+### Public
+
+* `POST /api/auth/login` — Authenticate admin and receive a JWT token
+* `GET /api/currencies` — Get all exchange rates
+* `GET /api/currencies/:id` — Get a specific exchange rate
+* `GET /api/convert?from=X&to=Y&amount=Z` — Convert an amount between currencies
+
+### Protected (requires JWT)
+
+* `POST /api/currencies` — Create a new exchange rate
+* `PATCH /api/currencies/:id` — Update an existing exchange rate
+* `DELETE /api/currencies/:id` — Delete an exchange rate
+
+## 📌 Future Improvements
+
+* 🌍 Support all world currencies
+* 🔄 Automatic exchange rate updates using an external API
+* 📈 Exchange rate history and charts
+* 👥 Role-based authentication
+* 🧪 Unit and integration testing
+
+## 👩‍💻 Author
+
+**Greta Dragoti**
+
+[GitHub](https://github.com/gretadr) · [LinkedIn](https://linkedin.com/in/your-linkedin-profile)
+
+---
+
+⭐ If you find this project useful, please consider giving it a star!
