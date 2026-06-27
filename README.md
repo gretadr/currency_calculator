@@ -30,40 +30,51 @@ Live API: `https://currency-calculator-backend-g6dt.onrender.com/api`
 ## Features
 
 - 🔄 Convert between multiple currencies
-- 🔍 Searchable currency dropdowns
+- 🔍 Real-time conversion with searchable dropdowns
 - 🔁 One-click currency swap
 - 🔐 JWT-based admin authentication
 - ⚙️ Protected admin panel with full CRUD operations
 - 🔄 Automatic synchronization of reverse exchange rates
-- ⏱️ Token expiration with auto-logout
+- ⏱️ Token expiration handling with auto-logout
 - 🐳 Dockerized for easy local development
 
 ## 🛠️ Tech Stack
 
-**Frontend:** Vue 3 (Composition API), Vue Router, Vite, Bootstrap 5, Axios  
-**Backend:** Node.js, Express, JWT, Bcrypt  
+**Frontend:** Vue 3 (Composition API), Vue Router, Vite, Bootstrap 5, Axios, Vue Multiselect
+**Backend:** Node.js, Express, JWT, Bcrypt, CORS
 **Database:** PostgreSQL (Supabase)  
 **DevOps:** Docker, Docker Compose  
 **Deployment:** Vercel, Render, Supabase
 
 ## 🚀 Local Setup
 
-### Prerequisites
+### Requiremenes
 
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) is needed to be installed
 
-### Steps
+### How to run
+1. Install and open [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+
+2. Clone the repository:
 
 ```bash
-# Clone the repository
 git clone https://github.com/gretadr/currency_calculator.git
-cd currency_calculator
+```
 
-# Run with Docker Compose
+3. Navigate into the project folder
+
+e.g
+
+```
+cd currency_calculator
+```
+4. Run with Docker compose
+
+```
 docker-compose up --build
 ```
 
-Open your browser at:
+5. When everything is up, open your browser at:
 
 ```
 http://localhost:8080
