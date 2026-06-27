@@ -6,12 +6,7 @@ A full-stack currency converter with a secured admin panel for managing exchange
 
 👉 **[Try the App](https://currency-calculator-sepia.vercel.app/)** 👈
 
-<details>
-<summary>🔧 For developers — Backend API</summary>
-
-Live API: `https://currency-calculator-backend-g6dt.onrender.com/api`
-
-</details>
+Backend API: `https://currency-calculator-backend-g6dt.onrender.com/api`
 
 ## Demo Admin Credentials
 
