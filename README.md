@@ -1,28 +1,32 @@
-# 💱 Currency Calculator
+# Currency Calculator
 
-A full-stack currency converter with a secured admin panel for managing exchange rates. Built with Vue 3, Node.js, and PostgreSQL.
+A full-stack currency converter with a secured admin panel for managing exchange rates. Built with Vue 3, Node.js, Express.js and PostgrsSQL.
 
 ## 🌐 Live Demo
 
-👉 **[Try the App](https://your-vercel-url.vercel.app)** 👈
+👉 **[Try the App](https://currency-calculator-sepia.vercel.app/)** 👈
 
-**Demo Admin Login:**
-- Username: `admin`
-- Password: `currency1`
+## Demo Admin Credentials
 
-## 📸 Screenshots
+- **Username:** `admin`
+- **Password:** `currency1`
 
-![Calculator](./screenshots/calculator.png)
-![Admin Panel](./screenshots/admin.png)
+## Sceenshots
+
+![Home Page](./screenshots/home.png)
+
+![Calculator](./screenshots/calculator.PNG)
+
+![Admin Panel](./screenshots/admin_panel.PNG)
 
 ## ✨ Features
 
-- 🔄 Convert between 20 currencies (380 exchange rate pairs)
+- 🔄 Convert between **20 currencies using 380 exchange rate pairs**
 - 🔍 Searchable currency dropdowns
 - 🔁 One-click currency swap
 - 🔐 JWT-based admin authentication
 - ⚙️ Protected admin panel with full CRUD operations
-- 🔄 Automatic reverse pair updates
+- 🔄 Automatic synchronization of reverse exchange rates
 - ⏱️ Token expiration with auto-logout
 - 🐳 Dockerized for easy local development
 
@@ -30,13 +34,14 @@ A full-stack currency converter with a secured admin panel for managing exchange
 
 **Frontend:** Vue 3 (Composition API), Vue Router, Vite, Bootstrap 5, Axios  
 **Backend:** Node.js, Express, JWT, Bcrypt  
-**Database:** PostgreSQL  
+**Database:** PostgreSQL (Supabase)  
 **DevOps:** Docker, Docker Compose  
-**Deployment:** Vercel (Frontend), Render (Backend), Supabase (Database)
+**Deployment:** Vercel, Render, Supabase
 
 ## 🚀 Local Setup
 
 ### Prerequisites
+
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 ### Steps
@@ -50,26 +55,47 @@ cd currency_calculator
 docker-compose up --build
 ```
 
-Open your browser at `http://localhost:8080`
+Open your browser at:
+
+```
+http://localhost:8080
+```
+
+Backend API:
+
+```
+http://localhost:5000
+```
 
 ## 🔌 API Endpoints
 
 ### Public
-- `POST /api/auth/login` — Authenticate user
+
+- `POST /api/auth/login` — Authenticate admin and receive a JWT token
 - `GET /api/currencies` — Get all exchange rates
-- `GET /api/currencies/:id` — Get a specific rate
-- `GET /api/convert?from=X&to=Y&amount=Z` — Convert currency
+- `GET /api/currencies/:id` — Get a specific exchange rate
+- `GET /api/convert?from=X&to=Y&amount=Z` — Convert an amount between currencies
 
 ### Protected (requires JWT)
-- `POST /api/currencies` — Create a new rate
-- `PATCH /api/currencies/:id` — Update a rate
-- `DELETE /api/currencies/:id` — Delete a rate
+
+- `POST /api/currencies` — Create a new exchange rate
+- `PATCH /api/currencies/:id` — Update an existing exchange rate
+- `DELETE /api/currencies/:id` — Delete an exchange rate
+
+## 📌 Future Improvements
+
+- 🌍 Support all world currencies
+- 🔄 Automatic exchange rate updates using an external API
+- 📈 Exchange rate history and charts
+- 👥 Role-based authentication
+- 🧪 Unit and integration testing
 
 ## 👩‍💻 Author
 
-**Greta Dragoti**  
-[GitHub](https://github.com/gretadr) · [LinkedIn](your-linkedin-url)
+**Greta Dragoti**
+
+[GitHub](https://github.com/gretadr) · [LinkedIn](https://linkedin.com/in/your-linkedin-profile)
 
 ---
 
-⭐ If you find this project useful, please give it a star!
+⭐ If you find this project useful, please consider giving it a star!
