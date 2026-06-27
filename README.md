@@ -57,13 +57,13 @@ Live API: `https://currency-calculator-backend-g6dt.onrender.com/api`
 
 2. Clone the repository:
 
-```bash
+```
 git clone https://github.com/gretadr/currency_calculator.git
 ```
 
 3. Navigate into the project folder
 
-e.g
+    e.g
 
 ```
 cd currency_calculator
@@ -86,6 +86,9 @@ Backend API:
 http://localhost:5000
 ```
 
+### Stop Application
+    Press `Ctrl+C` in the terminal
+
 ## 🔌 API Endpoints
 
 ### Public
@@ -104,6 +107,7 @@ http://localhost:5000
 ## 📌 Future Improvements
 
 - 🌍 Support all world currencies
+- 🏗️ Refactor the backend to use a base-currency exchange rate model
 - 🔄 Automatic exchange rate updates using an external API
 - 📈 Exchange rate history and charts
 - 👥 Role-based authentication
@@ -113,7 +117,7 @@ http://localhost:5000
 
 **Greta Dragoti**
 
-[GitHub](https://github.com/gretadr) · [LinkedIn](https://linkedin.com/in/your-linkedin-profile)
+[GitHub](https://github.com/gretadr) · [LinkedIn](https://www.linkedin.com/in/greta-dragoti-gr/)
 
 ---
 
