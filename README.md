@@ -4,9 +4,14 @@ A full-stack currency converter with a secured admin panel for managing exchange
 
 ## 🌐 Live Demo
 
-👉 **[Try the App](https://currency-calculator-sepia.vercel.app/)** 👈
+👉 **[Try the Currency Calculator App](https://currency-calculator-sepia.vercel.app/)** 👈
 
-Backend API: `https://currency-calculator-backend-g6dt.onrender.com/api`
+<details>
+<summary>🔧 Backend API</summary>
+
+Live API: `https://currency-calculator-backend-g6dt.onrender.com/api`
+
+</details>
 
 ## Demo Admin Credentials
 
