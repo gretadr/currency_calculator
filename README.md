@@ -1,6 +1,6 @@
 # Currency Calculator
 
-A full-stack currency converter with a secured admin panel for managing exchange rates. Built with Vue 3, Node.js, Express.js and PostgrsSQL.
+A full-stack currency converter with a secured admin panel for managing exchange rates. Built with Vue 3, Node.js, Express.js and PostgreSQL.
 
 
 ## 🌐 Live Demo
@@ -15,7 +15,7 @@ Live API: `https://currency-calculator-backend-g6dt.onrender.com/api`
 </details>
 
 
-## Demo Admin Credentials
+## 🔑 Demo Admin Credentials
 
 - **Username:** `admin`
 - **Password:** `currency1`
@@ -30,7 +30,7 @@ Live API: `https://currency-calculator-backend-g6dt.onrender.com/api`
 ![Admin Panel](./screenshots/admin_panel.PNG)
 
 
-## Features
+## ✨ Features
 
 - 🔄 Convert between multiple currencies
 - 🔍 Real-time conversion with searchable dropdowns
@@ -53,7 +53,7 @@ Live API: `https://currency-calculator-backend-g6dt.onrender.com/api`
 
 ## 🚀 Local Setup
 
-### Requiremenes
+### Requirements
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) is needed to be installed
 
